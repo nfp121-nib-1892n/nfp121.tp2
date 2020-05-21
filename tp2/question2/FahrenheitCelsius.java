@@ -17,8 +17,9 @@ public class FahrenheitCelsius{
      public static void main(String[] args){
          int fahrenheit = 0;
          float celsius = 0;
+         for(int i=0;i<args.length;i++){
        try{
-        for(int i=0;i<args.length;i++){
+        
            fahrenheit=Integer.parseInt(args[i]);
            celsius=fahrenheitEnCelsius(Integer.parseInt(args[i]));
            System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C"); // ligne,
@@ -27,9 +28,11 @@ public class FahrenheitCelsius{
                                                                                 
     }
       
-       }catch(NumberFormatException nfe){
+       catch(NumberFormatException nfe){
            System.out.println("error : " + nfe.getMessage());  // en cas d'erreur 
        }
+    }
+       
        
      }
      
